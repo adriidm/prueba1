@@ -1,49 +1,188 @@
-<!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
+    <!DOCTYPE html>
 <html>
-    <head>
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
-    </head>
+<head>
+
+  <title>jQuery Mobile page</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/themes/floristeria.css" />
+  <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+
+</head>
     <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+        <div data-role="page" id="inicio">
+                            <div data-role="header">
+                    <h1>Registrarse</h1>
+                    <center><img alt="logo" src="C:\AppServ\www\ejemplophonegap\images\logo.png" heith="100" width="200"/></center>
+              </div> 
+              <div data-role="main" class="ui-content">
+                    <label for="nombredeusuario">Usuario</label>
+      			<input type="text" id="nombredeusuario" name="nombredeusuario" data-clear-btn="true">
+      			<label for="clave">Password</label>
+     			<input type="password" id="clave" name="clave" data-clear-btn="true">
+                    <a href="#login" class="ui-btn" data-transition="flip">login</a>
+              </div>
+              <div data-role="footer" data-position="fixed">
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li><a data-transition="fade" data-icon="phone" id="id5" href="#empleados">Contacto</a></li>
+                        <li><a data-transition="fade" data-icon="home" id="paginados" href="#proveedores">Pedido</a></li>
+                        <li><a data-transition="fade" data-icon="search" id="id4" href="#proveedores">Web</a></li>
+                    </ul>
             </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+              </div>
+              </div>
+          </div>
+          <div data-role="page" id="login">
+                            <div data-role="header">
+                               <center><img alt="logo" src="C:\AppServ\www\ejemplophonegap\images\logo.png" heith="100" width="200"/></center>
+                              <h1>Bienvenido a la floristeria Merche</h1>
+              </div> 
+              <div data-role="main" class="ui-content">
+                    <a href="#paginaseis" class="ui-btn" data-transition="flip">Perfil</a>
+                    <a href="#" class="ui-btn" data-transition="flip">Ramos</a>
+                    <a href="#" class="ui-btn" data-transition="flip">Accesorios</a>
+                    <a href="#" class="ui-btn" data-transition="flip">Centros</a>
+                    <a href="#inicio" class="ui-btn ui-btn-inline" data-transition="flip">volver login</a>
+              </div>
+               
+              <div data-role="footer" data-position="fixed">
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li><a data-transition="fade" data-icon="phone" id="id5" href="#empleados">Contacto</a></li>
+                        <li><a data-transition="fade" data-icon="home" id="id4" href="#paginados">Pedido</a></li>
+                        <li><a data-transition="fade" data-icon="search" id="id4" href="#proveedores">Web</a></li>
+                    </ul>
+            </div>
+              </div>
+          </div>
+          
+        <div data-role="page" id="paginauno">
+              <div data-role="header">
+                    <h1>1 MENSAJES</h1>
+              </div> 
+              <div data-role="main" class="ui-content">
+                     <label><input type="radio" value"mensajes1">¡Felicidades!</label>
+                     <label><input type="radio" value"mensajes2">¡Feliz Cumpleaños!</label>
+                     <label><input type="radio" value"mensajes3">¡Feliz aniversario!</label>
+                    <label><input type="radio" value"mensajes4">¡Te Quiero!</label>
+                    <label><input type="checkbox" value"mensajes5">Mensaje personalizado</label>
+                    <label><textarea rows="5" cols="30"disabled onclick="personalizado();"></textarea></label>
+                     <a href="#inicio" class="ui-btn ui-btn-inline" data-transition="flip">volver login</a>
+                    <a href="#paginados" class="ui-btn ui-btn-inline" data-transition="flip">siguiente</a>
+              </div> 
+              <div data-role="footer">
+                     <h5> ESTO ES UNA PLANTILLA</h5>
+              </div>
+          </div>
+          <div data-role="page" id="paginados">
+              <div data-role="header">
+                    <h1> DIRECCION DE FACTURACION</h1>
+              </div> 
+              <div data-role="main" class="ui-content">
+                    Nombre<br><input type="text" id="nombre" name="nombre" value=""/><br><br>
+                Apellidos<br><input type="text" id="nombre" name="nombre" value=""/><br><br>
+                Dirección<br><input type="text" id="nombre" name="nombre" value=""/><br><br>
+                Ciudad<br><input type="text" id="nombre" name="nombre" value=""/><br><br>
+                Código Postal<br><input type="text" id="nombre" name="nombre" value=""/><br><br>
+                 Provincia<br><input type="text" id="nombre" name="nombre" value=""/><br><br>
+                  Télefono<br><input type="text" id="nombre" name="nombre" value=""/><br><br>
+                  <div data-role="controlgroup" data type="vertical">
+                  <a href="#paginauno" class="ui-btn ui-btn-inline" data-transition="flip">atrás</a>
+                  <a href="#paginatres" class="ui-btn ui-btn-inline" data-transition="flip">siguiente</a>
+              </div>
+              </div> 
+              <div data-role="footer">
+                     <h5> ESTO ES UNA PLANTILLA</h5>
+              </div>
+
+          </div>
+          <div data-role="page" id="paginatres">
+              <div data-role="header">
+                    <h1> DIRECCION DE ENVIO</h1>
+              </div> 
+              <div data-role="main" class="ui-content">
+                    Nombre<br><input type="text" id="nombre" name="nombre" value=""/><br><br>
+             Apellidos<br><input type="text" id="nombre" name="nombre" value=""/><br><br>
+              Dirección<br><input type="text" id="nombre" name="nombre" value=""/><br><br>
+              Ciudad<br><input type="text" id="nombre" name="nombre" value=""/><br><br>
+                Código Postal<br><input type="text" id="nombre" name="nombre" value=""/><br><br>
+                 Provincia<select>
+                 <option value="Málaga">Málaga </option>
+               <option value="Granada"> Granada </option>  
+               <option value="Sevilla "> Sevilla </option>  
+               <option value="Córdoba"> Córdoba </option>
+               <option value="Jaén"> Jaén </option>
+               <option value="Almería"> Almería </option>
+               <option value="Huelva"> Huelva </option>
+              <option value="Cádiz"> Cádiz </option>
+           </select><br><br>
+                  Télefono<br><input type="text" id="nombre" name="nombre" value=""/><br><br>
+                  <div data-role="controlgroup" data type="vertical">
+                   <a href="#paginados" class="ui-btn ui-btn-inline" data-transition="flip">atrás</a>
+                   <a href="#paginacuatro" class="ui-btn ui-btn-inline" data-transition="flip">siguiente</a>
+              </div>
+              </div> 
+              <div data-role="footer">
+                     <h5> ESTO ES UNA PLANTILLA</h5>
+              </div>
+
+          </div>
+          <div data-role="page" id="paginacuatro">
+              <div data-role="header">
+                    <h1> FECHA DE ENVIO</h1>
+              </div> 
+              <div data-role="main" class="ui-content">
+                     Fecha&nbsp;&nbsp;<input type="date" name="Fecha de nacimiento"><br><br>
+                     <div data-role="controlgroup" data type="vertical">
+                    <a href="#paginatres" class="ui-btn ui-btn-inline" data-transition="flip">atrás</a>
+                    <a href="#paginacinco" class="ui-btn ui-btn-inline" data-transition="flip">siguiente</a>
+              </div>
+              </div> 
+              <div data-role="footer">
+                     <h5> ESTO ES UNA PLANTILLA</h5>
+              </div>
+          </div>
+          <div data-role="page" id="paginacinco">
+              <div data-role="header">
+                    <h1> FORMAS DE PAGO</h1>
+              </div> 
+              <div data-role="main" class="ui-content">
+                   <label><input type="radio" value"VSA">VISA</label>
+        <label><input type="radio" value"MC">Master Card</label>
+        <label><input type="radio" value"AE">American Express</label>
+        Número tarjeta crédito<br><input type="text" id="nombre" name="nombre" value=""/><br><br>
+        Mes y año caducidad tarjeta de crédito&nbsp;&nbsp;<br><input type="month" name="Mes"><br><br>
+        Código Control<br><input type="text" id="nombre" name="nombre" value="" maxlength="3"/><br><br>
+                    <div data-role="controlgroup" data type="vertical">
+                    <a href="#paginacuatro" class="ui-btn ui-btn-inline" data-transition="flip">atrás</a>
+                    <center><input class="btn-success" type="submit" value="Finalizar Pedido" ><br><br></center>
+              </div>
+              </div> 
+              <div data-role="footer">
+                     <h5> ESTO ES UNA PLANTILLA</h5>
+              </div>
+          </div>
+
+        <div data-role="page" id="paginaseis">
+              <div data-role="header">
+                    <h1>Perfil</h1>
+              </div> 
+              <div data-role="main" class="ui-content">
+           Nombre<br><input type="text" id="nombre" name="nombre" value=""/><br><br>
+                Apellidos<br><input type="text" id="nombre" name="nombre" value=""/><br><br>
+                Dirección<br><input type="text" id="nombre" name="nombre" value=""/><br><br>
+                Ciudad<br><input type="text" id="nombre" name="nombre" value=""/><br><br>
+                Código Postal<br><input type="text" id="nombre" name="nombre" value=""/><br><br>
+                 Provincia<br><input type="text" id="nombre" name="nombre" value=""/><br><br>
+                  Télefono<br><input type="text" id="nombre" name="nombre" value=""/><br><br>
+            <a href="#login" class="ui-btn ui-btn-inline" data-transition="flip">atrás</a>
+              <div data-role="footer">
+                     <h5> ESTO ES UNA PLANTILLA</h5>
+              </div>
+          </div>
     </body>
 </html>
